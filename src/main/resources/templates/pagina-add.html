@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<div class="corpo" layout:fragment="corpo">
+
+    <div id="loader-form" class="pre-load"></div>
+
+    <form id="form-pagina" action="#">
+
+        <div id="alert"></div>
+
+        <div class="form-group">
+            <label for="linkPagina">Link da Pagina</label>
+            <input type="url" class="form-control" id="linkPagina" name="linkPagina" aria-describedby="linkOferta"
+                   placeholder="Ex.: http://www..."/>
+            <small id="linkOferta" class="form-text text-muted">Insira o link para pesquisa.
+            </small>
+            <div id="error-linkPagina" class=""></div>
+        </div>
+        <div class="form-group">
+            <label for="titulo">Título do Site</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="tituloOferta"/>
+            <small id="tituloOferta" class="form-text text-muted">Carregamento automático.</small>
+            <div id="error-titulo"></div>
+        </div>
+        
+         <div class="form-group">
+            <label for="url">Url do site</label>
+            <input type="text" class="form-control" id="url" name="url" aria-describedby="urlsite"/>
+            <small id="url" class="form-text text-muted">Carregamento automático a Url.</small>
+            <div id="error-url"></div>
+        </div>
+        
+         <div class="form-group">
+            <label for="desc">Descrição do Site</label>
+            <input type="text" class="form-control" id="desc" name="titulo" aria-describedby="descricao"/>
+            <small id="descricao" class="form-text text-muted">Carregamento automático, Descrição.</small>
+            <div id="error-desc"></div>
+        </div>        
+   
+        <div class="row p-3">
+            <button id="btn-og" class="btn btn-primary btn-lg btn-block">Cadastrar</button>
+            <span id="loader-img-btn"></span>
+        </div>
+    </form>
+
+</div>
+
+<script th:src="@{/js/pagina-add.js}" th:fragment="js"></script>
+</body>
+</html>
