@@ -27,11 +27,11 @@ $("#form-pagina").submit(function(evt) {
 			$("#form-pagina").each(function() {
 				this.reset();
 			});		
-			$("#alert").addClass("alert alert-success").text("OK! Promoção cadastrada com sucesso.");
+			$("#alert").addClass("alert alert-success").text("OK! Pagina cadastrada com sucesso.");
 		},
 		error: function(xhr) {
 			console.log("> error: ", xhr.responseText);
-			$("#alert").addClass("alert alert-danger").text("Não foi possível salvar esta pageção.");
+			$("#alert").addClass("alert alert-danger").text("Não foi possível salvar esta pagina.");
 		},
 		complete: function() {
 			$("#loader-form").fadeOut(800, function() {
